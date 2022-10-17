@@ -1,13 +1,286 @@
-body {
+body, a, p, span {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  font-size: 100%;
+  vertical-align: baseline;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+.page-wrap {
+  display: block;
+}
+
+.page-container {
+  position: relative;
+  overflow-x: hidden;
+  background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 45%, rgba(233, 162, 188, 0.1) 45%, rgba(233, 162, 188, 0.1) 45%);
+}
+
+.inner-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.left-container {
+  display: block;
+  padding-top: 10%;
+  padding-bottom: 10%;
+}
+
+.img-load {
+  border-radius: 10px;
+  width: 100%;
+  height: auto;
+}
+
+.right-container {
+  flex-basis: 950px;
+  flex-grow: 0;
+}
+
+header {
+  display: block;
+}
+
+.right-container > header {
+  padding: 0px 20px 0px 40px;
+}
+
+h1 {
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+p {
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.byline {
+  font-weight: 600;
+}
+
+.byline > a {
+  color: black;
+}
+
+.byline > a:hover {
+  color: #ea4c89;
+}
+
+.date {
+  color: #6e6d7a;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.button-container {
+  margin-bottom: 40px;
+  color: black;
+  padding: 10px;
+  display: inline-block;
+  margin-top: 10px;
+  
+}
+
+svg {
+  padding-left: 2px;
+  margin-top: 2px;
+  height: 15px;
+  align-items: center;
+  padding-right: 5px;
+}
+
+.button-container > .facebook-btn {
+  margin-right: 10px;
+  display: inline-block;
+  position: relative;
+  box-sizing: border-box;
+  padding: 10px 16px;
+  transition: color 200ms ease;
+  border: none;
+  border-radius: 8px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  fill: #3b5998;
+  appearance: none;
+  font-family: "Helvetica";
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 20px;
+  box-shadow: 0px 0px 0px 1px rgb(168, 166, 166) inset;
+  color: #0d0c22;
+  margin-bottom: 10px;
+}
+
+
+
+.button-container > .twitter-btn {
+  margin-right: 10px;
+  display: inline-block;
+  position: relative;
+  box-sizing: border-box;
+  padding: 10px 16px;
+  transition: color 200ms ease;
+  border: none;
+  border-radius: 8px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  appearance: none;
+  font-family: "Helvetica";
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 20px;
+  fill: #1da1f2;
+  box-shadow: 0px 0px 0px 1px rgb(168, 166, 166) inset;
+  color: #0d0c22;
+  margin-bottom: 10px;
+}
+
+.button-container > .linkedin-btn {
+  margin-right: 10px;
+  display: inline-block;
+  position: relative;
+  box-sizing: border-box;
+  padding: 10px 16px;
+  transition: color 200ms ease;
+  border: none;
+  border-radius: 8px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  appearance: none;
+  font-family: "Helvetica";
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 20px;
+  fill: #1476b4;
+  box-shadow: 0px 0px 0px 1px rgb(168, 166, 166) inset;
+  color: #0d0c22;
+  margin-bottom: 10px;
+}
+
+.button-container > .copy-btn {
+  margin-right: 10px;
+  display: inline-block;
+  position: relative;
+  box-sizing: border-box;
+  padding: 10px 16px;
+  transition: color 200ms ease;
+  border: none;
+  border-radius: 8px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  appearance: none;
+  font-family: "Helvetica";
+  font-size: 15px;
+  font-weight: 600;
+  fill: #6e6d7a;
+  line-height: 20px;
+  box-shadow: 0px 0px 0px 1px rgb(168, 166, 166) inset;
+  color: #0d0c22;
+  
+}
+
+.footer-container {
+  flex-shrink: 0px;
+  background: #fafafb;
+  color: #3d3d4e;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+ 
+}
+
+.inner-footer-container {
+  padding-left: 30px;
+  padding-right: 30px;
+  max-width: 1680px;
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.footer-container > .footer-main-container {
+  flex-direction: row;
+  padding: 72px 0px;
+  border-bottom: 2px solid #e1e1e2;
+}
+
+.footer-main-container {
+  padding-bottom: 30px;
+  border-bottom: 2px solid #e1e1e2;
+}
+
+
+.tag-container {
+  max-width: 256px;
+  margin: 20px 0;
+}
+
+.links-container {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.links-column:first-child {
+  margin-left: 150px;
+}
+
+.links-column {
+  width: 144px;
+}
+
+.link-heading {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  margin-top: 32px;
+  color: #0d0c22;
+  margin-top: 0px;
+}
+
+.link {
+  display: block;
+  margin-top: 16px;
+  color: #3d3d4e;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  text-decoration: none;
+}
+
+.footer-lower-container {
+  flex-direction: row;
+  padding: 44px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #727177;
+}
+
+.counts {
+  color: #0d0c22;
+  font-weight: 400;
+  font-size: medium;
+}
+
+.count-letters {
+  font-size: medium;
+  padding-right: 10px;
 }
